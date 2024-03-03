@@ -17,7 +17,7 @@
                 $_SESSION["logged_in"] = true;
                 $_SESSION["adresse_mail"] = $adresse_mail;
 
-                header("Location: votre_page.php"); // Remplacez "votre_page.php" par l'URL de votre page après connexion
+                header("Location: index.php"); // Remplacez "votre_page.php" par l'URL de votre page après connexion
                 exit();
             } else{
                 $error_message = "Veuillez saisir votre nom d'utilisateur et votre mot de passe.";
@@ -38,7 +38,7 @@
     <header>
         <div>
             <img src="images/logo.png" alt="logo" width="80px">
-            <a href="login.php">Connexion</a>
+            <a href="utilisateur.php">Inscription</a>
         </div>
     </header>
 

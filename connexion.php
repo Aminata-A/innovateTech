@@ -10,4 +10,7 @@ if ($conn->connect_error){
     die("Echec de la connexion: " . $con->connect_error);
 }
 //echo "Connexion reussie"
+
+
+
 ?>
