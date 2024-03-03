@@ -57,14 +57,14 @@ include "connexion.php";
         while ($row = mysqli_fetch_assoc($result)) {
         ?>
           <tr>
-            <td><?php echo $row["id_idees"] ?></td>
+            <td><?php echo $row["id_idee"] ?></td>
             <td><?php echo $row["titre"] ?></td>
             <td><?php echo $row["descriptions"] ?></td>
             <td><?php echo $row["categorie"] ?></td>
             <td><?php echo $row["id_utilisateur"] ?></td>
             <td>
-              <a href="edit.php?id=<?php echo $row["id_idees"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-              <a href="delete.php?id=<?php echo $row["id_idees"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+              <a href="edit.php?id=<?php echo $row["id_idee"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <a href="delete.php?id=<?php echo $row["id_idee"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
             </td>
           </tr>
         <?php

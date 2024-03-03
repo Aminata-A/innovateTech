@@ -53,31 +53,31 @@
         <form action="" method="post">
             <ul>
                 <li><label for="prenom">Prénom :</label></li>
-                <li><input type="text" id="prenom" name="prenom" required ></li>
+                <li><input type="text" id="prenom" name="prenom" required class = "input" ></li>
 
                 <li><label for="nom">Nom :</label></li>
-                <li><input type="text" id="nom" name="nom" required></li>
+                <li><input type="text" id="nom" name="nom" required class = "input"></li>
 
                 <li><label for="adresse_mail">Adresse Email :</label></li>
-                <li><input type="email" id="adresse_mail" name="adresse_mail" required></li>
+                <li><input type="email" id="adresse_mail" name="adresse_mail" required class = "input"></li>
 
                 <li><label for="telephone">Téléphone :</label></li>
-                <li><input type="tel" id="telephone" name="telephone" required></li>
+                <li><input type="tel" id="telephone" name="telephone" required class = "input"></li>
 
                 <li><label for="adresse">Adresse :</label></li>
-                <li><input type="text" id="adresse" name="adresse" required></li>
+                <li><input type="text" id="adresse" name="adresse" required class = "input"></li>
 
                 <li><label for="mot_de_passe">Mot de Passe :</label></li>
-                <li><input type="password" id="mot_de_passe" name="mot_de_passe" required></li>
+                <li><input type="password" id="mot_de_passe" name="mot_de_passe" required class = "input"></li>
 
                 <li><label for="date_naissance">Date de Naissance :</label></li>
-                <li><input type="date" id="date_naissance" name="date_naissance" required></li>
+                <li><input type="date" id="date_naissance" name="date_naissance" required class = "input"></li>
 
                 <li><label for="lieu_naissance">Lieu de Naissance :</label></li>
-                <li><input type="text" id="lieu_naissance" name="lieu_naissance" required></li>
+                <li><input type="text" id="lieu_naissance" name="lieu_naissance" required class = "input"></li>
 
                 <li><label for="poste">Poste :</label></li>
-                <li><input type="text" id="poste" name="poste" required></li>
+                <li><input type="text" id="poste" name="poste" required class = "input"></li>
 
                 <li><input type="submit" name="submit" value="S'inscrire"></li>
             </ul>

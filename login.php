@@ -13,9 +13,13 @@
             $result = $conn->query($sql);
 
             if($result->num_rows == 1){
-
+            
                 $_SESSION["logged_in"] = true;
                 $_SESSION["adresse_mail"] = $adresse_mail;
+                while($row = $result->fetch_assoc()) {
+                    $_SESSION["id_utilisateur"] = $row['id_utilisateur'];
+                  }
+                
 
                 header("Location: index.php"); // Remplacez "votre_page.php" par l'URL de votre page après connexion
                 exit();

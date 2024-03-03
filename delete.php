@@ -1,22 +1,22 @@
 <?php
-include "fonctions.php";
+include "connexion.php";
 
 // Vérifier si l'identifiant de l'utilisateur est passé dans l'URL
-if(isset($_GET["id_utilisateur"])) {
+if(isset($_GET["id_idee"])) {
     // Récupérer l'identifiant de l'utilisateur depuis l'URL
-    $id_utilisateur = $_GET["id_utilisateur"];
+    $id_idee = $_GET["id_idee"];
 
     // Vérifier si l'identifiant de l'utilisateur est un entier valide
-    if (!is_numeric($id_utilisateur)) {
+    if (!is_numeric($id_idee)) {
         echo "L'identifiant de l'utilisateur n'est pas valide.";
         exit(); // Arrêter l'exécution du script si l'identifiant n'est pas valide
     }
 
     // Échapper les caractères spéciaux pour éviter les injections SQL
-    $id_utilisateur = mysqli_real_escape_string($conn, $id_utilisateur);
+    $id_idee = mysqli_real_escape_string($conn, $id_idee);
 
     // Construire la requête SQL en utilisant des guillemets simples autour de la valeur de chaîne
-    $sql = "DELETE FROM utilisateur WHERE id_utilisateur = '$id_utilisateur'";
+    $sql = "DELETE FROM utilisateur WHERE id_idee = '$id_idee'";
 
     // Exécuter la requête SQL
     $result = mysqli_query($conn, $sql);
@@ -29,6 +29,6 @@ if(isset($_GET["id_utilisateur"])) {
         echo "Failed: " . mysqli_error($conn);
     }
 } else {
-    echo "ID de l'utilisateur non spécifié.";
+    echo "ID de l'idee non ete spécifié.";
 }
 ?>

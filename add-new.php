@@ -1,3 +1,35 @@
+<?php
+session_start();
+include "connexion.php";
+
+if(isset($_POST['submit'])){
+    // Récupération des données du formulaire
+    $titre = $_POST['titre'];
+    $descriptions = $_POST['descriptions'];
+    $categorie = $_POST['categorie'];
+    $id_utilisateur = $_SESSION["id_utilisateur"];
+
+    // Vérification des champs requis
+    if(empty($titre) || empty($descriptions) || empty($categorie) || empty($id_utilisateur)  ){
+        header("location: add-new.php?error=Veuillez remplir tous les champs");
+        exit();
+    }
+    $titre = htmlspecialchars($titre);
+    $categorie = htmlspecialchars($categorie);
+    // Requête SQL pour l'insertion des données
+    $sql = "INSERT INTO idees (titre, descriptions, categorie, id_utilisateur)
+    VALUES ('$titre', '$descriptions', '$categorie', '$id_utilisateur')";
+
+    if($conn->query($sql) === TRUE) {
+        header("location: index.php");
+    } else {
+        echo "Erreur lors de l'insertion : " . $conn->error;
+    }
+    exit(); // Arrête l'exécution du script après l'insertion
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,8 +122,6 @@
                      $id_utilisateur = generate_user_id();
                      ?>
 
-
-                    <input type="hidden" id="id_utilisateur" name="id_utilisateur" value="<?php echo $id_utilisateur; ?>">
 
                     <button type="submit" class="btn btn-primary" name="submit">Ajouter</button>
                     <a href="index.php" class="btn btn-secondary">Annuler</a>
