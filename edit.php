@@ -22,10 +22,10 @@ if(isset($_POST["submit"])) {
         exit();
     }
     $titre = htmlspecialchars($titre);
-    $descriptions = htmlspecialchars($categorie);
-    $categorie = htmlspecialchars($categorie);
-    // Requête SQL pour l'insertion des données
-    // Requête pour mettre à jour les informations de l'utilisateur
+    $descriptions = htmlspecialchars($descriptions);
+    $categorie = htmlspecialchars($categorie); 
+
+
     $sql = "UPDATE idees SET titre='$titre', descriptions='$descriptions', categorie='$categorie', id_utilisateur='$id_utilisateur' WHERE id_idee ='$id_idee'";
     $result = mysqli_query($conn, $sql);
     if($conn->query($sql) === TRUE) {
@@ -55,37 +55,47 @@ if(isset($_POST["submit"])) {
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* Custom styles */
-        header {
-            background-color: #c1ff72; /* Couleur principale pour l'en-tête */
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-around;
-        }
+            /* Custom styles */
+        
+    @import url('https://fonts.cdnfonts.com/css/league-spartan');
 
-        header img {
-            margin-right: 10px;
-        }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'League Spartan', sans-serif;        
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        background-color: #f7f7f7;
+    }
+    header div{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header div a{
+        text-decoration: none;
+        font-weight: bold;
+        color: #5ce1e6;
+    }
 
-        header a {
-            color: #000;
-            text-decoration: none;
-        }
+    .container {
+        margin-top: 50px;
+    }
 
-        .container {
-            margin-top: 50px;
-        }
+    .btn-primary {
+        background-color: #5ce1e6; /* Couleur principale pour le bouton Modifier */
+        border-color: #5ce1e6;
+    }
 
-        .btn-primary {
-            background-color: #5ce1e6; /* Couleur principale pour le bouton Modifier */
-            border-color: #5ce1e6;
-        }
-
-        .btn-secondary {
-            background-color: #ff6b6b; /* Couleur principale pour le bouton Annuler */
-            border-color: #ff6b6b;
-            margin-left: 10px;
-        }
+    .btn-secondary {
+        background-color: #ff6b6b; /* Couleur principale pour le bouton Annuler */
+        border-color: #ff6b6b;
+        margin-left: 10px;
+    }
     </style>
 </head>
 

@@ -1,0 +1,98 @@
+
+   @import url('https://fonts.cdnfonts.com/css/league-spartan');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'League Spartan', sans-serif;        
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    align-items: center;
+    margin-bottom: 2em;
+}
+header ul{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul li{
+  list-style-type: none;
+}
+header ul li a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+header ul li a:hover{
+  color: #5ce1e6;
+}
+.deconnexion{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: .6em;
+    border-radius: 50px;
+    background-color: #5ce1e6;
+}
+.deconnexion:hover{
+    color: #c1ff72;
+}
+
+  h1 {
+    color: #5ce1e6;
+    text-align: center;
+    font-weight: bold;
+  }
+  h2{
+    margin: 20px 2em;
+    font-weight: bold;
+    font-size: 1.5em;
+
+    
+    }
+    .total-card{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+    }
+        .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        grid-gap: 20px;
+        width: 90%;
+    }
+    
+    .card {
+        display: grid;
+        grid-template-rows: max-content 230px 1fr;
+    }
+    .card img{
+        border-radius: 5px;
+    }
+    .card p{
+        padding: 15px;
+    }
+    .ellipsis-text {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 200px; /* Définissez la largeur maximale à laquelle le texte peut s'étendre */
+    }
+    
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.073);
+}
+
+/* Add some padding inside the card container */
+.container1 {
+  padding: 16px 16px;
+}
+.footer{
+  background: #5ce1e6;
+}

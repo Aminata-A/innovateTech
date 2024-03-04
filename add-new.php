@@ -45,22 +45,30 @@ if(isset($_POST['submit'])){
 
     <style>
         /* Custom styles */
-        header {
-            background-color: #c1ff72; /* Couleur principale pour l'en-tête */
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-around;
-        }
+        @import url('https://fonts.cdnfonts.com/css/league-spartan');
 
-        header img {
-            margin-right: 10px;
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'League Spartan', sans-serif;        
         }
-
-        header a {
-            color: #000;
-            text-decoration: none;
+        header{
+        display: flex;
+        justify-content: center;
+        background-color: #f7f7f7;
         }
-
+        header div{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        header div a{
+        text-decoration: none;
+        font-weight: bold;
+        color: #5ce1e6;
+        }
         .container {
             margin-top: 50px;
         }

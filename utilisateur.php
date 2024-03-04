@@ -52,6 +52,7 @@
 
         <form action="" method="post">
             <ul>
+                <div>
                 <li><label for="prenom">Prénom :</label></li>
                 <li><input type="text" id="prenom" name="prenom" required class = "input" ></li>
 
@@ -67,6 +68,9 @@
                 <li><label for="adresse">Adresse :</label></li>
                 <li><input type="text" id="adresse" name="adresse" required class = "input"></li>
 
+                </div>
+                <div>
+
                 <li><label for="mot_de_passe">Mot de Passe :</label></li>
                 <li><input type="password" id="mot_de_passe" name="mot_de_passe" required class = "input"></li>
 
@@ -79,7 +83,8 @@
                 <li><label for="poste">Poste :</label></li>
                 <li><input type="text" id="poste" name="poste" required class = "input"></li>
 
-                <li><input type="submit" name="submit" value="S'inscrire"></li>
+                <li><input type="submit" name="submit" value="S'inscrire" class="button"></li>
+                </div>
             </ul>
         </form>
     </div>
