@@ -14,14 +14,16 @@ if(isset($_POST['submit'])){
         header("location: add-new.php?error=Veuillez remplir tous les champs");
         exit();
     }
+    
     $titre = htmlspecialchars($titre);
+    $descriptions = htmlspecialchars($categorie);
     $categorie = htmlspecialchars($categorie);
     // Requête SQL pour l'insertion des données
     $sql = "INSERT INTO idees (titre, descriptions, categorie, id_utilisateur)
     VALUES ('$titre', '$descriptions', '$categorie', '$id_utilisateur')";
 
     if($conn->query($sql) === TRUE) {
-        header("location: index.php");
+        header("location: index.php?msg=Idée ajoutée avec succès !");
     } else {
         echo "Erreur lors de l'insertion : " . $conn->error;
     }
@@ -109,20 +111,6 @@ if(isset($_POST['submit'])){
                     </div>
 
                     <!-- Le champ pour l'ID utilisateur sera automatiquement rempli -->
-                    <?php
-
-
-                     // Générer un ID utilisateur unique
-                     function generate_user_id() {
-                        // Générer un ID utilisateur unique en utilisant une combinaison de timestamp et d'un nombre aléatoire
-                        return time() . mt_rand(100, 999);
-                     }
-
-                     // Utiliser la fonction pour obtenir l'ID utilisateur
-                     $id_utilisateur = generate_user_id();
-                     ?>
-
-
                     <button type="submit" class="btn btn-primary" name="submit">Ajouter</button>
                     <a href="index.php" class="btn btn-secondary">Annuler</a>
                 </form>

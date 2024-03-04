@@ -16,7 +16,7 @@ if(isset($_GET["id_idee"])) {
     $id_idee = mysqli_real_escape_string($conn, $id_idee);
 
     // Construire la requête SQL en utilisant des guillemets simples autour de la valeur de chaîne
-    $sql = "DELETE FROM utilisateur WHERE id_idee = '$id_idee'";
+    $sql = "DELETE FROM idees WHERE id_idee = '$id_idee'";
 
     // Exécuter la requête SQL
     $result = mysqli_query($conn, $sql);
